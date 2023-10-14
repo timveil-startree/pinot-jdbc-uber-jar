@@ -13,6 +13,8 @@
     <description>Apache Pinot uber jar</description>
 
     <properties>
+        <maven.compiler.source>17</maven.compiler.source>
+        <maven.compiler.target>17</maven.compiler.target>
         <java.version>17</java.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <pinot.version>1.0.0</pinot.version>
@@ -45,6 +47,14 @@
                 <exclusion>
                     <groupId>org.slf4j</groupId>
                     <artifactId>slf4j-api</artifactId>
+                </exclusion>
+                <exclusion>
+                    <groupId>org.apache.helix</groupId>
+                    <artifactId>helix-core</artifactId>
+                </exclusion>
+                <exclusion>
+                    <groupId>org.apache.thrift</groupId>
+                    <artifactId>libthrift</artifactId>
                 </exclusion>
             </exclusions>
         </dependency>
@@ -91,15 +101,21 @@
                                     <artifact>*:*</artifact>
                                     <includes>
                                         <include>**/*.class</include>
-                                        <include>**/*-version-info.properties</include>
-                                        <include>**/*.MF</include>
+                                        <include>**/*.properties</include>
                                     </includes>
+                                    <excludes>
+                                        <exclude>**/module-info.class</exclude>
+                                        <exclude>META-INF/*.MF</exclude>
+                                        <exclude>META-INF/*.SF</exclude>
+                                        <exclude>META-INF/*.DSA</exclude>
+                                        <exclude>META-INF/*.RSA</exclude>
+                                    </excludes>
                                 </filter>
                             </filters>
                             <artifactSet>
-                                <includes>
-                                    <include>*:*</include>
-                                </includes>
+                                <excludes>
+                                    <exclude>org.apache.helix:*</exclude>
+                                </excludes>
                             </artifactSet>
                         </configuration>
                     </execution>
