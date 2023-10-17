@@ -178,6 +178,7 @@
                                     </includes>
                                     <excludes>
                                         <exclude>**/module-info.class</exclude>
+                                        <include>**/epsg.properties</include> <!-- this is a 3mb file -->
                                         <exclude>META-INF/*.MF</exclude>
                                         <exclude>META-INF/*.SF</exclude>
                                         <exclude>META-INF/*.DSA</exclude>
