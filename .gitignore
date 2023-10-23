@@ -1,5 +1,7 @@
 .idea
 
+NOTES.md
+
 target/
 pom.xml.tag
 pom.xml.releaseBackup
