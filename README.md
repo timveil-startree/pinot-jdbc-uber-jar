@@ -19,7 +19,7 @@ Once built, you can refer to this jar in a Maven project with the following...
 
 ## Other Helpful Commands
 
-Quickly build/install only the JDBC Client and its dependents from the Apache Pinot project.  This is useful for quick testing of the "uber" jar.
+Quickly build and install only the JDBC Client and its dependents from the Apache Pinot project to you local Maven repository.  This is useful for quick testing of the "uber" jar.
 ```shell
 # Linux/macOS
 mvn clean install -DskipTests -Dcheckstyle.skip=true -pl pinot-clients/pinot-jdbc-client -am
