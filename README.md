@@ -29,3 +29,5 @@ mvn clean install -DskipTests -Dcheckstyle.skip=true -pl pinot-clients/pinot-jdb
 # Windows (Maven Daemon)
 mvnd clean install -DskipTests -D"checkstyle.skip"=true -pl pinot-clients/pinot-jdbc-client -am
 ```
+
+In addition to skipping the `checkstyle` plugin, you may also skip the following: `-Djacoco.skip=true -Drat.skip=true -Dlicense.skip=true`
