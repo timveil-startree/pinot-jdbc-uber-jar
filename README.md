@@ -21,7 +21,7 @@ Once built, you can refer to this jar in a Maven project with the following...
 
 Quickly build/install only the JDBC Client from the Apache Pinot project.  This is useful for quick testing.
 ```
-mvn clean package -DskipTests -pl pinot-clients/pinot-jdbc-client -am
+mvn clean install -DskipTests -pl pinot-clients/pinot-jdbc-client -am
 ```
 
 Quickly build/install Apache Pinot project on Windows with [Maven Daemon](https://github.com/apache/maven-mvnd).   We skip `npm` and `checkstyle` plugins because neither are currently configured to work properly on Windows.  The other skipped plugins are not necessary for publishing jars to our local maven repository for uber-jar testing.
