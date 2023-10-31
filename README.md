@@ -19,7 +19,7 @@ Once built, you can refer to this jar in a Maven project with the following...
 
 ## Other Helpful Commands
 
-Build Apache Pinot project on Windows with [Maven Daemon](https://github.com/apache/maven-mvnd)
+Build Apache Pinot project on Windows with [Maven Daemon](https://github.com/apache/maven-mvnd).   We skip `npm` and `checkstyle` plugins because neither are currently configured to work properly on Windows.
 ```
-mvnd clean install -DskipTests -D"checkstyle.skip"=true
+mvnd clean install -DskipTests -D"skip.npm"=true -D"skip.installnodenpm"=true -D"checkstyle.skip"=true
 ```
