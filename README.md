@@ -16,3 +16,10 @@ Once built, you can refer to this jar in a Maven project with the following...
     <version>1.1.0-SNAPSHOT</version>
 </dependency>
 ```
+
+## Other Helpful Commands
+
+Build Apache Pinot project on Windows with [Maven Daemon](https://github.com/apache/maven-mvnd)
+```
+mvnd clean install -DskipTests -D"checkstyle.skip"=true
+```
