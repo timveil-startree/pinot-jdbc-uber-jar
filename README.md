@@ -19,7 +19,7 @@ Once built, you can refer to this jar in a Maven project with the following...
 
 ## Other Helpful Commands
 
-Build Apache Pinot project on Windows with [Maven Daemon](https://github.com/apache/maven-mvnd).   We skip `npm` and `checkstyle` plugins because neither are currently configured to work properly on Windows.
+Quickly build/install Apache Pinot project on Windows with [Maven Daemon](https://github.com/apache/maven-mvnd).   We skip `npm` and `checkstyle` plugins because neither are currently configured to work properly on Windows.  The other skipped plugins are not necessary for publishing jars to our local maven repository for uber-jar testing.
 ```
-mvnd clean install -DskipTests -D"skip.npm"=true -D"skip.installnodenpm"=true -D"checkstyle.skip"=true
+mvnd clean install -Pno-integration-tests -DskipTests -D"skip.npm"=true -D"skip.installnodenpm"=true -D"checkstyle.skip"=true -D"jacoco.skip"=true -D"rat.skip"=true
 ```
