@@ -132,6 +132,10 @@
                     <groupId>io.grpc</groupId>
                     <artifactId>grpc-netty-shaded</artifactId>
                 </exclusion>
+                <exclusion>
+                    <groupId>io.grpc</groupId>
+                    <artifactId>grpc-protobuf-lite</artifactId>
+                </exclusion>
             </exclusions>
         </dependency>
 
