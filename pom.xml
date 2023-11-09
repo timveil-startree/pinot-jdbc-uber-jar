@@ -55,6 +55,9 @@
         </repository>
     </distributionManagement>
 
+    <!--
+        We want to remove all logging implementations and only shade jar with SLF4J API thus letting the user determine their own logging impl.
+    -->
 
     <dependencies>
         <dependency>
