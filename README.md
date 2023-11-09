@@ -19,6 +19,7 @@ Once built, you can refer to this jar in a Maven project with the following...
 
 ## Other Helpful Commands
 
+### Building Pinot
 Quickly build and install only the JDBC Client and its dependents from the Apache Pinot project to you local Maven repository.  This is useful for quick testing of the "uber" jar.
 ```shell
 # Linux/macOS
@@ -30,7 +31,23 @@ mvnd clean install -DskipTests -D"checkstyle.skip"=true -pl pinot-clients/pinot-
 
 In addition to skipping the `checkstyle` plugin, you may also skip the following: `-Djacoco.skip=true -Drat.skip=true -Dlicense.skip=true`
 
-To output the full dependency tree to a file you can run something like this...
+### Dependency and Plugin Version Management
+To output the full dependency tree to a file you can run something like this:
 ```shell
 mvn dependency:tree -DoutputFile=/some/path/tree.log -DappendOutput=true
+```
+
+to locate a specific dependency you can run:
+```shell
+mvn dependency:tree -DappendOutput=true -Dincludes=org.apache.helix:helix-core
+```
+
+to check for plugin updates you can run:
+```shell
+mvn versions:display-plugin-updates
+```
+
+to check for dependency updates you can run:
+```shell
+mvn versions:display-dependency-updates "-Dmaven.version.ignore=.*-M.*,.*-alpha.*,.*Alpha.*,.*rc.*"
 ```
