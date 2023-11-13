@@ -31,7 +31,7 @@ mvnd clean install -DskipTests -D"checkstyle.skip"=true -pl pinot-clients/pinot-
 
 In addition to skipping the `checkstyle` plugin, you may also skip the following: `-Djacoco.skip=true -Drat.skip=true -Dlicense.skip=true`
 
-### Dependency and Plugin Version Management
+### Dependency and Plugin Management
 To output the full dependency tree to a file you can run something like this:
 ```shell
 mvn dependency:tree -DoutputFile=/some/path/tree.log -DappendOutput=true
