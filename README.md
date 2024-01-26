@@ -37,6 +37,12 @@ To output the full dependency tree to a file you can run something like this:
 mvn dependency:tree -DoutputFile=/some/path/tree.log -DappendOutput=true
 ```
 
+to get additional details:
+```shell
+# Windows (Maven Daemon)
+mvnd -Ddetail=true -D"skip.gradle.tests"=true -DskipExtensionValidation -D"invoker.skip"=true -DskipITs -DskipTest -DskipDocs dependency:tree
+```
+
 to locate a specific dependency you can run:
 ```shell
 mvn dependency:tree -DappendOutput=true -Dincludes=org.apache.helix:helix-core
