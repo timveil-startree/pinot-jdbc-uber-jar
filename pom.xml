@@ -17,7 +17,7 @@
         <maven.compiler.target>17</maven.compiler.target>
         <java.version>17</java.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <pinot.version>1.1.0-SNAPSHOT</pinot.version>
+        <pinot.version>1.1.0</pinot.version>
         <netty.version>4.1.109.Final</netty.version>
         <slf4j.version>2.0.12</slf4j.version>
         <zookeeper.version>3.9.2</zookeeper.version>
