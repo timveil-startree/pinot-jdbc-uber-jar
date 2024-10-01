@@ -13,7 +13,7 @@ Once built, you can refer to this jar in a Maven project with the following...
 <dependency>
     <groupId>org.apache.pinot</groupId>
     <artifactId>pinot-jdbc-uber-jar</artifactId>
-    <version>1.1.0-SNAPSHOT</version>
+    <version>1.2.0-SNAPSHOT</version>
 </dependency>
 ```
 
